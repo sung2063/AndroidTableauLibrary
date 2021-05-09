@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingLeft="10dp"
+    android:paddingTop="25dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="25dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:text="Travel" />
+
+    <ImageView
+        android:id="@+id/iv_unfilled_bar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@id/tv_title"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/linear_progress_back_stack_bar" />
+
+    <ImageView
+        android:id="@+id/iv_filled_bar"
+        android:layout_width="150dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@id/iv_unfilled_bar"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/linear_progress_active_bar" />
+
+    <TextView
+        android:id="@+id/tv_min_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_unfilled_bar"
+        android:layout_marginTop="5dp"
+        android:text="0"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_middle_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_unfilled_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="50"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_max_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_unfilled_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:text="100"
+        android:textColor="@android:color/black"
+        android:textSize="10sp" />
+
+</RelativeLayout>

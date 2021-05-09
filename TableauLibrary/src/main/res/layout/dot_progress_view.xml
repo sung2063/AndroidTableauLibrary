@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="25dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="25dp">
+
+    <LinearLayout
+        android:id="@+id/ll_dot_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" />
+
+    <TextView
+        android:id="@+id/tv_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_dot_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        tools:text="25%" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_percentage"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        tools:text="Travel" />
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Default Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Custom Colors -->
+    <color name="mainBackgroundColor">#EEEEEE</color>
+
+    <color name="menuColor1">#E69419</color>
+    <color name="menuColor2">#684985</color>
+    <color name="menuColor3">#019FC3</color>
+    <color name="menuColor4">#c3b901</color>
+    <color name="menuColor5">#eb1a6d</color>
+
+    <color name="introBackgroundColor1">#77E69419</color>
+    <color name="introBackgroundColor2">#99684985</color>
+    <color name="introBackgroundColor3">#99019FC3</color>
+    <color name="introBackgroundColor4">#991A6B9E</color>
+    <color name="introBackgroundColor5">#88eb1a6d</color>
+
+    <color name="introIconColor1">#E69419</color>
+    <color name="introIconColor2">#684985</color>
+    <color name="introIconColor3">#019FC3</color>
+    <color name="introIconColor4">#1A6B9E</color>
+    <color name="introIconColor5">#eb1a6d</color>
+
+    <color name="colorPink">#e82e8e</color>
+
+</resources>

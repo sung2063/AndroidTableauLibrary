@@ -1,0 +1,3 @@
+include ':TableauLibrary'
+include ':app'
+rootProject.name = "Tableau Project Sample"

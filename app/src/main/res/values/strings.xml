@@ -1,0 +1,20 @@
+<resources>
+    
+    <string name="app_name">Tableau App</string>
+
+    <!-- Custom Strings -->
+    <string name="app_title">Sample Tableau App</string>
+    <string name="app_description">(@sung2063/AndroidTableauLibrary)</string>
+    <string name="sponsor_message">Sponsor to @sung2063</string>
+
+    <string name="app_menu1">Pie Bar Graph</string>
+    <string name="app_menu2">Dot Progress</string>
+    <string name="app_menu3">Linear Progress</string>
+    <string name="app_menu4">GitHub</string>
+
+    <string name="app_menu1_description">Graph</string>
+    <string name="app_menu2_description">Progress</string>
+    <string name="app_menu3_description">Progress</string>
+    <string name="app_menu4_description">\@sung2063</string>
+
+</resources>

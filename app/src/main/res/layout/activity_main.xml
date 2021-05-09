@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackgroundColor"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <TextView
+        android:id="@+id/tv_app_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="@string/app_title"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_app_sub_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_description"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_title" />
+
+    <Button
+        android:id="@+id/bt_sponsorship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_heart"
+        android:drawablePadding="5dp"
+        android:drawableTint="@color/colorPink"
+        android:text="@string/sponsor_message"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPink"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end"
+        app:layout_constraintStart_toEndOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_sub_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/bt_sponsorship" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
