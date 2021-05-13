@@ -28,7 +28,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".DotProgressActivity"
-            android:label="Linear Progress Bar"
+            android:label="Dot Progress Bar"
             android:screenOrientation="portrait" />
         <activity
             android:name=".VotingGraphActivity"
