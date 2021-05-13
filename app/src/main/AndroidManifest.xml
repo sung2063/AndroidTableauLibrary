@@ -20,15 +20,19 @@
         </activity>
         <activity
             android:name=".PieBarGraphActivity"
+            android:label="Pie Bar Graph"
             android:screenOrientation="portrait" />
         <activity
             android:name=".LinearProgressActivity"
+            android:label="Linear Progress Bar"
             android:screenOrientation="portrait" />
         <activity
             android:name=".DotProgressActivity"
+            android:label="Linear Progress Bar"
             android:screenOrientation="portrait" />
         <activity
             android:name=".VotingGraphActivity"
+            android:label="Voting Graph"
             android:screenOrientation="portrait" />
     </application>
 
