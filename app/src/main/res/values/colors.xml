@@ -11,6 +11,8 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Custom Colors -->
+    <color name="systemBarColor">#73c7ba</color>
+    <color name="actionBarColor">#8dc9c0</color>
     <color name="mainBackgroundColor">#EEEEEE</color>
 
     <color name="menuColor1">#E69419</color>
