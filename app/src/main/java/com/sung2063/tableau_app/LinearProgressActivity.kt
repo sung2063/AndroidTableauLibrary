@@ -16,9 +16,11 @@ class LinearProgressActivity : AppCompatActivity() {
 
         // [1] Create the data
         val dataList = ArrayList<LinearProgressModel>()
-        dataList.add(LinearProgressModel("Travel", 20f, "#395F7C"))
-        dataList.add(LinearProgressModel("Housing", 50f, "#7c3961"))
-        dataList.add(LinearProgressModel("Utility", 80f, "#397c6f"))
+        dataList.add(LinearProgressModel("Category 1", 40f, "#395F7C"))
+        dataList.add(LinearProgressModel("Category 2", 55f, "#7c3961"))
+        dataList.add(LinearProgressModel("Category 3", 100f, "#397c6f"))
+        dataList.add(LinearProgressModel("Category 4", 30f, "#7c3958"))
+        dataList.add(LinearProgressModel("Category 5", 80f, "#7c7939"))
 
         // [2] Set Handler and link with the view
         val handler = LinearProgressHandler(dataList)

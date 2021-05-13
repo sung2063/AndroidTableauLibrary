@@ -63,7 +63,7 @@ class LinearProgressItemsAdapter(
             ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 viewHolder.ivUnfilledBar.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                val unitScale = viewHolder.ivUnfilledBar.width / 100
+                val unitScale = viewHolder.ivUnfilledBar.width / (100 - 1)
                 val activeHeight = viewHolder.ivUnfilledBar.height
 
                 val scope = CoroutineScope(Dispatchers.Main + CoroutineName("ProgressCounter"))
