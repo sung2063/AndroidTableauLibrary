@@ -19,14 +19,14 @@ class LinearProgressView @JvmOverloads constructor(
     private var isUsingCommonColor: Boolean
     private var commonFilledColor: String?
     private var commonUnfilledColor: String?
-    private var maxValue: Integer
+    private var maxValue: Int
 
     init {
         val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.LinearProgressView, 0, 0)
         isUsingCommonColor = typedArray.getBoolean(R.styleable.LinearProgressView_useCommonColor, false)
         commonFilledColor = typedArray.getString(R.styleable.LinearProgressView_filledColor)
         commonUnfilledColor = typedArray.getString(R.styleable.LinearProgressView_unfilledColor)
-        maxValue = typedArray.getInteger(R.styleable.LinearProgressView_maxValue, 100) as Integer
+        maxValue = typedArray.getInteger(R.styleable.LinearProgressView_maxValue, 100)
     }
 
     fun setHandler(_handler: LinearProgressHandler) {

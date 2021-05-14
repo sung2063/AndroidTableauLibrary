@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
+import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -21,7 +22,7 @@ class LinearProgressItemsAdapter(
     private val isUsingCommonColor: Boolean,
     private val commonFilledColor: String?,
     private val commonUnfilledColor: String?,
-    private val maxValue: Integer,
+    private val maxValue: Int,
     private val space: Int = 0
 ) : RecyclerView.Adapter<LinearProgressItemsAdapter.ViewHolder>() {
 
@@ -29,6 +30,8 @@ class LinearProgressItemsAdapter(
         val tvTitle: TextView = view.findViewById(R.id.tv_title)
         val ivFilledBar: ImageView = view.findViewById(R.id.iv_filled_bar)
         val ivUnfilledBar: ImageView = view.findViewById(R.id.iv_unfilled_bar)
+        val tvMiddleValue: TextView = view.findViewById(R.id.tv_middle_value)
+        val tvMaxValue: TextView = view.findViewById(R.id.tv_max_value)
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
@@ -41,6 +44,7 @@ class LinearProgressItemsAdapter(
 
         viewHolder.tvTitle.text = dataList[position].name
 
+        // Determine filled and unfilled colors
         var filledColor: String
         var unfilledColor: String
         if (isUsingCommonColor) {
@@ -59,22 +63,28 @@ class LinearProgressItemsAdapter(
         val gradientUnfilledImage = unfilledImage as GradientDrawable
         gradientUnfilledImage.setColor(Color.parseColor(unfilledColor))
 
+        // Set middle and max value
+        val middleValue = maxValue.div(2)
+        viewHolder.tvMiddleValue.text = middleValue.toString()
+        viewHolder.tvMaxValue.text = maxValue.toString()
+
+        // Calculate the screen size before drawn
         viewHolder.ivUnfilledBar.viewTreeObserver.addOnGlobalLayoutListener(object :
-            ViewTreeObserver.OnGlobalLayoutListener {
+            OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 viewHolder.ivUnfilledBar.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                val unitScale = viewHolder.ivUnfilledBar.width / (100 - 1)
-                val activeHeight = viewHolder.ivUnfilledBar.height
+                val unitScale = viewHolder.ivUnfilledBar.width.toFloat().div(maxValue.minus(1))
+                val activeHeight = viewHolder.ivUnfilledBar.height.toFloat()
 
                 val scope = CoroutineScope(Dispatchers.Main + CoroutineName("ProgressCounter"))
                 scope.launch {
-                    var i = 0
-                    while (i < dataList[position].value.toInt()) {
-                        i++
-                        val activeWidth = i.times(unitScale)
+                    var tracking = 0
+                    while (tracking < dataList[position].value) {
+                        tracking++
+                        val activeWidth = tracking.times(unitScale)
 
                         // Set new param
-                        val newParam = RelativeLayout.LayoutParams(activeWidth, activeHeight)
+                        val newParam = RelativeLayout.LayoutParams(activeWidth.toInt(), activeHeight.toInt())
                         newParam.addRule(RelativeLayout.ALIGN_BOTTOM, R.id.iv_unfilled_bar)
                         newParam.setMargins(0, 0, 0, space.times(5))
                         viewHolder.ivFilledBar.layoutParams = newParam

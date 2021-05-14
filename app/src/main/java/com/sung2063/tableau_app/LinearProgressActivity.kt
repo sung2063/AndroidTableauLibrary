@@ -15,7 +15,7 @@ class LinearProgressActivity : AppCompatActivity() {
         val linearProgressView: LinearProgressView = findViewById(R.id.linear_progress_view)
 
         // [1] Create the data
-        val dataList = ArrayList<LinearProgressModel>()
+        val dataList = mutableListOf<LinearProgressModel>()
         dataList.add(LinearProgressModel("Category 1", 40f, "#395F7C"))
         dataList.add(LinearProgressModel("Category 2", 55f, "#7c3961"))
         dataList.add(LinearProgressModel("Category 3", 100f, "#397c6f"))
