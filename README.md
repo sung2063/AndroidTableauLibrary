@@ -11,3 +11,9 @@ Android Tableau library updates regularly. Your valueable sponsorship helps me c
 ## 📝 License
  
  The code is licensed under the <a href="https://github.com/sung2063/AndroidTableauLibrary/blob/master/LICENSE">MIT License</a>.
+
+ ## 🌟 Contributors
+ 
+ <b>Developer</b>: <i>Sung Hyun Back (@sung2063)</i>
+ 
+ <b>Designer</b>: <i>Da Eun Park</i>
