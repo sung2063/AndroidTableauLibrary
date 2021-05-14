@@ -50,9 +50,9 @@
         android:layout_below="@id/iv_unfilled_bar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:text="50"
         android:textColor="@android:color/black"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        tools:text="50" />
 
     <TextView
         android:id="@+id/tv_max_value"
@@ -61,8 +61,8 @@
         android:layout_below="@id/iv_unfilled_bar"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
-        android:text="100"
         android:textColor="@android:color/black"
-        android:textSize="10sp" />
+        android:textSize="10sp"
+        tools:text="100" />
 
 </RelativeLayout>
