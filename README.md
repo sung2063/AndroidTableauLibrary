@@ -8,3 +8,6 @@ Android Tableau library updates regularly. Your valueable sponsorship helps me c
 
 [![Github Sponsorship](marketing/sponsor_iconx64.png)](https://github.com/sponsors/sung2063)
 
+## 📝 License
+ 
+ The code is licensed under the <a href="https://github.com/sung2063/AndroidTableauLibrary/blob/master/LICENSE">MIT License</a>.
