@@ -18,16 +18,27 @@ class DotProgressView @JvmOverloads constructor(
     attrs: AttributeSet? = null
 ) : ConstraintLayout(context, attrs) {
 
-    fun setHandler(handler: DotProgressHandler) {
+    // UI objects
+    private var isUsingCommonColor: Boolean
+    private var commonFilledColor: String?
+    private var maxValue: Int
 
-        View.inflate(context, R.layout.linear_progress_layout, this)
+    init {
+        val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.DotProgressView, 0, 0)
+        isUsingCommonColor = typedArray.getBoolean(R.styleable.DotProgressView_useCommonColor, false)
+        commonFilledColor = typedArray.getString(R.styleable.DotProgressView_filledColor)
+        maxValue = typedArray.getInteger(R.styleable.DotProgressView_maxValue, 100)
+    }
 
-        val recyclerView: RecyclerView = findViewById(R.id.rv_linear_progress_list)
+    fun setHandler(_handler: DotProgressHandler) {
+
+        View.inflate(context, R.layout.dot_progress_layout, this)
+        val recyclerView: RecyclerView = findViewById(R.id.rv_dot_progress_list)
 
         // Get the data
-        val dataList = handler.dataList
-        val adapter = DotProgressItemsAdapter(context, dataList)
-        val gridLayoutManager = GridLayoutManager(context, dataList.size)
+        val adapter = DotProgressItemsAdapter(context, _handler.dataList, isUsingCommonColor, commonFilledColor)
+
+        val gridLayoutManager = GridLayoutManager(context, _handler.dataList.size)
         recyclerView.layoutManager = gridLayoutManager
         recyclerView.adapter = adapter
 

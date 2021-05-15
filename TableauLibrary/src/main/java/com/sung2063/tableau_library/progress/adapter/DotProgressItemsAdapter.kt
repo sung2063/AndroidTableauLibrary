@@ -16,10 +16,10 @@ import kotlinx.coroutines.*
 
 class DotProgressItemsAdapter(
     private val context: Context,
-    private val dataList: List<DotProgressModel>
+    private val dataList: List<DotProgressModel>,
+    private val isUsingCommonColor: Boolean,
+    private var commonFilledColor: String?
 ) : RecyclerView.Adapter<DotProgressItemsAdapter.ViewHolder>() {
-
-    private val maxNumOfScale = 20
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val llDotContainer: LinearLayout = view.findViewById(R.id.ll_dot_container)
@@ -35,24 +35,34 @@ class DotProgressItemsAdapter(
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
-        viewHolder.tvPercentage.text = "${dataList[position].value?.toInt()}%"
+        viewHolder.tvPercentage.text = "0%"
         viewHolder.tvTitle.text = dataList[position].name
 
-        for (i in 0 until maxNumOfScale) {
+        for (i in 0 until maxNumScale) {
             viewHolder.llDotContainer.addView(createScale())
         }
 
+        commonFilledColor.let { commonFilledColor = "#395f7c" }
+        val filledColor =
+            if (isUsingCommonColor) commonFilledColor else dataList[position].progressColor
+
         val scope = CoroutineScope(Dispatchers.Main + CoroutineName("ProgressCounter"))
         scope.launch {
-            val numOfFillingBox = dataList[position].value?.div(5).toInt()
-            for (index in 0 until numOfFillingBox) {
-                val fillingBoxIndex = maxNumOfScale - index
+            val numOfFillingBox = dataList[position].value.div(5).toInt()
+            for (tracking in 0 until numOfFillingBox) {
+                val fillingBoxIndex = maxNumScale.minus(tracking)
+
+                // Update filling box
                 val fillingBox = viewHolder.llDotContainer.getChildAt(fillingBoxIndex)
                 val childView = fillingBox as? ImageView
                 childView?.setImageResource(R.drawable.dot_progress_filled)
                 val activeImage = childView?.drawable
                 val gradientActiveImage = activeImage as? GradientDrawable
-                gradientActiveImage?.setColor(Color.parseColor(dataList[position].progressColor))
+                gradientActiveImage?.setColor(Color.parseColor(filledColor))
+
+                // Update text
+                viewHolder.tvPercentage.text = "${tracking}%"
+
                 delay(50L)
             }
         }
@@ -63,10 +73,13 @@ class DotProgressItemsAdapter(
     private fun createScale(): ImageView {
         var scaleUnit = ImageView(context)
         val unfilledViewParam = LinearLayout.LayoutParams(150, 25)
-        unfilledViewParam.setMargins(0, 15, 0, 15)
+        unfilledViewParam.setMargins(0, 10, 0, 10)
         scaleUnit.layoutParams = unfilledViewParam
         scaleUnit.setImageResource(R.drawable.dot_progress_unfilled)
         return scaleUnit
     }
 
+    companion object {
+        private const val maxNumScale = 20
+    }
 }
