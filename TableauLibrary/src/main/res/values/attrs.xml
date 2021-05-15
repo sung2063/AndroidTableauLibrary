@@ -2,6 +2,10 @@
 <resources>
 
     <!-- Commonly Used -->
+    <attr name="useCommonColor" format="boolean" />
+    <attr name="filledColor" format="string" />
+    <attr name="unfilledColor" format="string" />
+    <attr name="maxValue" format="integer" />
 
     <!-- XML attributes -->
     <declare-styleable name="PieGraphView">
@@ -12,10 +16,17 @@
     </declare-styleable>
 
     <declare-styleable name="LinearProgressView">
-        <attr name="useCommonColor" format="boolean" />
-        <attr name="filledColor" format="string" />
-        <attr name="unfilledColor" format="string" />
-        <attr name="maxValue" format="integer" />
+        <attr name="useCommonColor" />
+        <attr name="filledColor" />
+        <attr name="unfilledColor" />
+        <attr name="maxValue" />
+    </declare-styleable>
+
+    <declare-styleable name="DotProgressView">
+        <attr name="useCommonColor" />
+        <attr name="filledColor" />
+        <attr name="unfilledColor" />
+        <attr name="maxValue" />
     </declare-styleable>
 
 </resources>
