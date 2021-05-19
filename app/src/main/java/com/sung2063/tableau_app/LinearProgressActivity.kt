@@ -15,12 +15,13 @@ class LinearProgressActivity : AppCompatActivity() {
         val linearProgressView: LinearProgressView = findViewById(R.id.linear_progress_view)
 
         // [1] Create the data
-        val dataList = mutableListOf<LinearProgressModel>()
-        dataList.add(LinearProgressModel("Category 1", 40f, "#395F7C"))
-        dataList.add(LinearProgressModel("Category 2", 55f, "#7c3961"))
-        dataList.add(LinearProgressModel("Category 3", 100f, "#397c6f"))
-        dataList.add(LinearProgressModel("Category 4", 30f, "#7c3958"))
-        dataList.add(LinearProgressModel("Category 5", 80f, "#7c7939"))
+        val dataList = mutableListOf(
+            LinearProgressModel("Category 1", 40f, "#395F7C"),
+            LinearProgressModel("Category 2", 55f, "#7c3961"),
+            LinearProgressModel("Category 3", 100f, "#397c6f"),
+            LinearProgressModel("Category 4", 30f, "#7c3958"),
+            LinearProgressModel("Category 5", 80f, "#7c7939")
+        )
 
         // [2] Set Handler and link with the view
         val handler = LinearProgressHandler(dataList)
