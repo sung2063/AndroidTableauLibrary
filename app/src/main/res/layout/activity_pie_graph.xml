@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PieBarGraphActivity">
+    tools:context=".PieGraphActivity">
 
     <com.sung2063.tableau_library.graph.PieGraphView
         android:id="@+id/pie_graph_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:useArcColor="true"
+        app:useArcColor="false"
         app:graphColor="#023047"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
