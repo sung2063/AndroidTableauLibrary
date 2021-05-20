@@ -1,5 +1,7 @@
 # Android Tableau Library
 
+[![](https://jitpack.io/v/sung2063/AndroidTableauLibrary.svg)](https://jitpack.io/#sung2063/AndroidTableauLibrary)
+
 Android Tableau library supports variety of graphs which developers simply integrate visualization reports on Android application.
 
 ## 💖 Sponsor
