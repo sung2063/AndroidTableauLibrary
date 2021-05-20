@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TableauProjectSample">
         <activity
-            android:name=".MainActivity"
+            android:name=".PieGraphActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PieGraphActivity"
+            android:name=".MainActivity"
             android:label="Pie Bar Graph"
             android:screenOrientation="portrait" />
         <activity
