@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PieBarGraphActivity"
+            android:name=".PieGraphActivity"
             android:label="Pie Bar Graph"
             android:screenOrientation="portrait" />
         <activity

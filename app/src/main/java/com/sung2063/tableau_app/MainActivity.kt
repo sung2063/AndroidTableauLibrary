@@ -5,7 +5,6 @@ import android.graphics.Paint
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -45,7 +44,7 @@ class MainActivity : AppCompatActivity(), MenuOptionRecyclerViewAdapter.EventLis
     override fun onMenuClicked(position: Int) {
         var intent: Intent? = null
         when (position) {
-            NavigateConstant.GRAPH_PIE_CHART -> intent = Intent(this, PieBarGraphActivity::class.java)
+            NavigateConstant.GRAPH_PIE_CHART -> intent = Intent(this, PieGraphActivity::class.java)
             NavigateConstant.DOT_PROGRESS -> intent = Intent(this, DotProgressActivity::class.java)
             NavigateConstant.LINEAR_PROGRESS -> intent = Intent(this, LinearProgressActivity::class.java)
             NavigateConstant.GIT_HUB_WEB_PAGE -> {
