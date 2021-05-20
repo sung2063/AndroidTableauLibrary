@@ -34,9 +34,7 @@ class MenuOptionRecyclerViewAdapter(
         }
 
         override fun onClick(view: View?) {
-            menuOptionListener?.let {
-                it.onMenuClicked(adapterPosition)
-            }
+            menuOptionListener.onMenuClicked(adapterPosition)
         }
     }
 
