@@ -27,8 +27,7 @@ class PieGraphActivity : AppCompatActivity() {
         )
 
         // [2] Set Handler and link with the view
-        val handler = PieGraphHandler(dataList)
-        pieGraphView.setHandler(handler)
+        pieGraphView.setHandler(PieGraphHandler(dataList))
 
     }
 

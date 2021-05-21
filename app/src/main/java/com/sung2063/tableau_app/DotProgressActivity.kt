@@ -22,8 +22,6 @@ class DotProgressActivity : AppCompatActivity() {
         )
 
         // [2] Set Handler and link with the view
-        val handler = DotProgressHandler(dataList)
-        dotProgressView.setHandler(handler)
-
+        dotProgressView.setHandler(DotProgressHandler(dataList))
     }
 }
