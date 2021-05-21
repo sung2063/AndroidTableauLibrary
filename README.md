@@ -51,7 +51,7 @@ allprojects {
 
 Next, add the TableauViews and required libraries in <i>app level</i> `build.gradle` and sync the gradle file. 
 ```gradle
-implementation 'com.github.sung2063:AndroidTableauLibrary:1.0-rc-1'
+implementation 'com.github.sung2063:AndroidTableauLibrary:1.0-rc-2'
 implementation 'com.google.android.material:material:1.3.0'
 ```
 
