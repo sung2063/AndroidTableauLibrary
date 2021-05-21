@@ -18,7 +18,8 @@ class DotProgressItemsAdapter(
     private val context: Context,
     private val dataList: List<DotProgressModel>,
     private val isUsingCommonColor: Boolean,
-    private var commonFilledColor: String?
+    private var commonFilledColor: String?,
+    private var commonUnfilledColor: String?
 ) : RecyclerView.Adapter<DotProgressItemsAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -38,13 +39,13 @@ class DotProgressItemsAdapter(
         viewHolder.tvPercentage.text = "0%"
         viewHolder.tvTitle.text = dataList[position].name
 
-        for (i in 0 until maxNumScale) {
-            viewHolder.llDotContainer.addView(createScale())
-        }
-
-        commonFilledColor.let { commonFilledColor = "#395f7c" }
         val filledColor =
             if (isUsingCommonColor) commonFilledColor else dataList[position].progressColor
+        val unfilledColor = if (isUsingCommonColor) commonUnfilledColor else dataList[position].backStackColor
+
+        for (i in 0 until maxNumScale) {
+            viewHolder.llDotContainer.addView(createScale(unfilledColor))
+        }
 
         val scope = CoroutineScope(Dispatchers.Main + CoroutineName("ProgressCounter"))
         scope.launch {
@@ -61,7 +62,7 @@ class DotProgressItemsAdapter(
                 gradientActiveImage?.setColor(Color.parseColor(filledColor))
 
                 // Update text
-                viewHolder.tvPercentage.text = "${tracking}%"
+                viewHolder.tvPercentage.text = "${String.format("%.0f", tracking.div(20.0f).times(100))}%"
 
                 delay(50L)
             }
@@ -70,12 +71,14 @@ class DotProgressItemsAdapter(
 
     override fun getItemCount() = dataList.size
 
-    private fun createScale(): ImageView {
+    private fun createScale(unfilledColor: String?): ImageView {
         var scaleUnit = ImageView(context)
         val unfilledViewParam = LinearLayout.LayoutParams(150, 25)
         unfilledViewParam.setMargins(0, 10, 0, 10)
         scaleUnit.layoutParams = unfilledViewParam
         scaleUnit.setImageResource(R.drawable.dot_progress_unfilled)
+        val gradientUnfilledImage = scaleUnit.drawable as GradientDrawable
+        gradientUnfilledImage.setStroke(1, Color.parseColor(unfilledColor))
         return scaleUnit
     }
 

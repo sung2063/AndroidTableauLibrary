@@ -13,10 +13,12 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.sung2063.tableau_library.R
+import com.sung2063.tableau_library.exception.IllegalArgumentException
 import com.sung2063.tableau_library.graph.adapter.PieGraphDataAdapter
 import com.sung2063.tableau_library.graph.handler.PieGraphHandler
 import com.sung2063.tableau_library.graph.model.PieGraphModel
 import com.sung2063.tableau_library.graph.util.GraphUtil
+import com.sung2063.tableau_library.util.RegexTool
 
 class PieGraphView @JvmOverloads constructor(
     context: Context,
@@ -28,7 +30,7 @@ class PieGraphView @JvmOverloads constructor(
 
     // Data variables
     private var isUsingArcColor: Boolean
-    private var graphColor: String? = "#023047"
+    private var graphColor: String? = null
     private lateinit var dataList: ArrayList<PieGraphModel>
     private var alphaList: List<Int>? = null
 
@@ -36,6 +38,16 @@ class PieGraphView @JvmOverloads constructor(
         val typedArray = context.theme.obtainStyledAttributes(attrs, R.styleable.PieGraphView, 0, 0)
         isUsingArcColor = typedArray.getBoolean(R.styleable.PieGraphView_useArcColor, false)
         graphColor = typedArray.getString(R.styleable.PieGraphView_graphColor)
+
+        // Check conditions & exceptions
+        if (graphColor == null) {
+            graphColor = "#023047"      // Default color
+        } else if (!RegexTool.HEX_COLOR_CODE.toRegex()
+                .matches(input = graphColor.toString())
+        ) {
+            throw IllegalArgumentException(context.getString(R.string.hex_color_code_illegal_error))
+        }
+
         setWillNotDraw(false)
     }
 
@@ -47,7 +59,8 @@ class PieGraphView @JvmOverloads constructor(
 
         // Setup Data List
         rvDataList = view.findViewById(R.id.rv_pie_graph_data_list)
-        val pieGraphDataAdapter = PieGraphDataAdapter(dataList, isUsingArcColor, alphaList)
+        val pieGraphDataAdapter =
+            PieGraphDataAdapter(dataList, isUsingArcColor, graphColor, alphaList)
         rvDataList.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         rvDataList.adapter = pieGraphDataAdapter
     }

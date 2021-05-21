@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TableauProjectSample">
         <activity
-            android:name=".PieGraphActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".PieGraphActivity"
             android:label="Pie Bar Graph"
             android:screenOrientation="portrait" />
         <activity
@@ -29,10 +29,6 @@
         <activity
             android:name=".DotProgressActivity"
             android:label="Dot Progress Bar"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".VotingGraphActivity"
-            android:label="Voting Graph"
             android:screenOrientation="portrait" />
     </application>
 

@@ -26,7 +26,6 @@
         <attr name="useCommonColor" />
         <attr name="filledColor" />
         <attr name="unfilledColor" />
-        <attr name="maxValue" />
     </declare-styleable>
 
 </resources>

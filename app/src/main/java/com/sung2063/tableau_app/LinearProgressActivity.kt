@@ -24,8 +24,7 @@ class LinearProgressActivity : AppCompatActivity() {
         )
 
         // [2] Set Handler and link with the view
-        val handler = LinearProgressHandler(dataList)
-        linearProgressView.setHandler(handler)
+        linearProgressView.setHandler(LinearProgressHandler(dataList))
 
     }
 }
