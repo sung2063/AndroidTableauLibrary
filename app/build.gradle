@@ -42,6 +42,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //implementation 'com.github.sung2063:AndroidTableauLibrary:1.0-rc-2'
 
     // Dependency on a local library module
     implementation project(":TableauLibrary")
