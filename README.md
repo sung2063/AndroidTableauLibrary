@@ -17,6 +17,9 @@ Android Tableau library updates regularly. Your valueable sponsorship helps me c
 Updated on <i>May 19th 2021</i>
 - <b>NEW</b>: PieGraphView, DotProgressView, and LinearProgressView are released! ✨
 
+Updated on <i>May 20th 2021</i>
+- Improve codes from v1.0-rc-1
+
 ## 📖 Usage Instruction
 
 <b>1. Setup your Android project setting</b>
