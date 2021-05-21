@@ -14,6 +14,7 @@ import com.sung2063.tableau_library.graph.model.PieGraphModel
 class PieGraphDataAdapter(
     private val data: List<PieGraphModel>,
     private val isUsingArcColor: Boolean,
+    private val graphColor: String?,
     private val alphaList: List<Int>?
 ) : RecyclerView.Adapter<PieGraphDataAdapter.ViewHolder>() {
 
@@ -38,7 +39,7 @@ class PieGraphDataAdapter(
         if (isUsingArcColor) {
             legendColor = data[position].color
         } else {
-            legendColor = "#023047"
+            legendColor = graphColor
             alphaList.let { gradientDrawable.alpha = it?.get(position)!! }
         }
         gradientDrawable.setColor(Color.parseColor(legendColor))

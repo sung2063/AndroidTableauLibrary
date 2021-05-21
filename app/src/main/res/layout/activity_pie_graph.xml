@@ -10,8 +10,6 @@
         android:id="@+id/pie_graph_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:useArcColor="false"
-        app:graphColor="#023047"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
