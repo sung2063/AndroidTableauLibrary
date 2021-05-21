@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hex_color_code_illegal_error">HEX color code must be #000000 format.</string>
+
+</resources>
