@@ -186,11 +186,6 @@ Here are available attributions you can use to customize your tableau views.
       <td>string</td>
       <td>Hex color code for scale line.</td>
    </tr>
-   <tr>
-      <td>maxValue</td>
-      <td>integer</td>
-      <td>The maximum value for progress.</td>
-   </tr>
   </table>
 </center>
 
