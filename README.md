@@ -2,7 +2,16 @@
 
 <img src="marketing/banner.png" width="100%" />
 
+<div>
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" style="float:left" />
+  <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" style="float:left" />
+</div>
+<br/>
+
 [![](https://jitpack.io/v/sung2063/AndroidTableauLibrary.svg)](https://jitpack.io/#sung2063/AndroidTableauLibrary)
+[![Generic badge](https://img.shields.io/badge/Build-Passing-13dd1a.svg)](#)
+[![Generic badge](https://img.shields.io/badge/Maintained-Yes-13dd1a.svg)](#)
+[![Generic badge](https://img.shields.io/badge/License-MIT-13dd1a.svg)](#)
 
 Android Tableau library supports variety of graphs which developers simply integrate visualization reports on Android application.
 
@@ -10,7 +19,7 @@ Android Tableau library supports variety of graphs which developers simply integ
 
 Android Tableau library updates regularly. Your valueable sponsorship helps me contributing more features and maintaining the library. Support me for building more interesting projects! 💜
 
-<div>
+<div align="center">
 <a href="https://github.com/sponsors/sung2063"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" style="float: left" /></a>
 <a href="https://www.paypal.com/donate?business=sunghyunb1991%40gmail.com&item_name=GitHub+Open+Source+Project+Sponsorship&currency_code=USD"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
 </div>
