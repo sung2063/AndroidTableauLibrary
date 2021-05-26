@@ -24,7 +24,17 @@ Android Tableau library updates regularly. Your valueable sponsorship helps me c
 <a href="https://www.paypal.com/donate?business=sunghyunb1991%40gmail.com&item_name=GitHub+Open+Source+Project+Sponsorship&currency_code=USD"><img src="https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white" /></a>
 </div>
 
-## 🆕 Latest Update
+## 📋 Table of Contents
+1. [Latest Update](#update)
+2. [Usage Instruction](#instruction)
+    1. [PieGraphView](#pie_graph_view)
+    2. [DotProgressView](#dot_progress_view)
+    3. [LinearProgressView](#linear_progress_view)
+3. [Attributions](#attributions)
+4. [License](#license)
+5. [Contributors](#contributors)
+
+## 🆕 Latest Update <a name="update" />
 
 Updated on <i>May 19th 2021</i>
 - <b>NEW</b>: PieGraphView, DotProgressView, and LinearProgressView are released! ✨
@@ -32,7 +42,7 @@ Updated on <i>May 19th 2021</i>
 Updated on <i>May 20th 2021</i>
 - Improve codes from v1.0-rc-1
 
-## 📖 Usage Instruction
+## 📖 Usage Instruction <a name="instruction" />
 
 <b>1. Setup your Android project setting</b>
 
@@ -71,7 +81,7 @@ Now you are ready to use Tableau Library. You can start creating graph and progr
 
 <hr/>
 
-### *PieGraphView*
+### *PieGraphView* <a name="pie_graph_view" />
 
 <img src="images/PieGraphView.jpg" width="250" />
 
@@ -98,7 +108,7 @@ Your pie graph with list of data is displayed on your app! 👏<br/>
 
 <hr/>
 
-### *DotProgressView*
+### *DotProgressView* <a name="dot_progress_view" />
 
 <img src="gifs/DotProgressView_GIF.gif" width="250" />
 
@@ -125,7 +135,7 @@ Your dot progress graph with list of data is displayed on your app! 👏<br/>
 
 <hr/>
 
-### *LinearProgressView*
+### *LinearProgressView* <a name="linear_progress_view" />
 
 <img src="gifs/LinearProgressView_GIF.gif" width="250" />
 
@@ -151,7 +161,7 @@ linearProgressView.setHandler(handler)
 Your linear progress graph with list of data is displayed on your app! 👏<br/><br/>
 
 
-## 🎨 Attributions
+## 🎨 Attributions <a name="attributions" />
 
 Here are available attributions you can use to customize your tableau views.
 
@@ -236,11 +246,11 @@ Here are available attributions you can use to customize your tableau views.
   </table>
 </center>
 
-## 📝 License
+## 📝 License <a name="license" />
  
  The code is licensed under the <a href="https://github.com/sung2063/AndroidTableauLibrary/blob/master/LICENSE">MIT License</a>.
 
- ## 🌟 Contributors
+ ## 🌟 Contributors <a name="contributors" />
  
  <b>Developer</b>: <i>Sung Hyun Back (@sung2063)</i>
  
