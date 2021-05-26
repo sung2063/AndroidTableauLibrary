@@ -27,10 +27,14 @@ Android Tableau library updates regularly. Your valueable sponsorship helps me c
 ## 📋 Table of Contents
 1. [Latest Update](#update)
 2. [Usage Instruction](#instruction)
-    1. [PieGraphView](#pie_graph_view)
-    2. [DotProgressView](#dot_progress_view)
-    3. [LinearProgressView](#linear_progress_view)
+    1. [Setup Project](#setup_project)
+    2. [PieGraphView](#pie_graph_view)
+    3. [DotProgressView](#dot_progress_view)
+    4. [LinearProgressView](#linear_progress_view)
 3. [Attributions](#attributions)
+    1. [PieGraphView](#attr_pie_graph_view)
+    2. [DotProgressView](#attr_dot_progress_view)
+    3. [LinearProgressView](#attr_linear_progress_view)
 4. [License](#license)
 5. [Contributors](#contributors)
 
@@ -44,7 +48,7 @@ Updated on <i>May 20th 2021</i>
 
 ## 📖 Usage Instruction <a name="instruction" />
 
-<b>1. Setup your Android project setting</b>
+<b>1. Setup your Android project setting</b><a name="setup_project" />
 
 Minimum SDK Version: 21 or greater (Update in your <i>app level</i> `build.gradle`)<br/>
 Supported Programming Language: Kotlin
@@ -165,7 +169,7 @@ Your linear progress graph with list of data is displayed on your app! 👏<br/>
 
 Here are available attributions you can use to customize your tableau views.
 
-### PieGraphView
+### PieGraphView <a name="attr_pie_graph_view" />
 
 <center>
   <table>
@@ -187,7 +191,7 @@ Here are available attributions you can use to customize your tableau views.
   </table>
 </center>
 
-### DotProgressView
+### DotProgressView <a name="attr_dot_progress_view" />
 
 <center>
   <table>
@@ -214,7 +218,7 @@ Here are available attributions you can use to customize your tableau views.
   </table>
 </center>
 
-### LinearProgressView
+### LinearProgressView <a name="attr_linear_progress_view" />
 
 <center>
   <table>
