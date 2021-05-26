@@ -35,8 +35,8 @@ Android Tableau library updates regularly. Your valueable sponsorship helps me c
     1. [PieGraphView](#attr_pie_graph_view)
     2. [DotProgressView](#attr_dot_progress_view)
     3. [LinearProgressView](#attr_linear_progress_view)
-4. [License](#license)
-5. [Contributors](#contributors)
+4. [Contributors](#contributors)
+5. [License](#license)
 
 ## 🆕 Latest Update <a name="update" />
 
@@ -250,12 +250,12 @@ Here are available attributions you can use to customize your tableau views.
   </table>
 </center>
 
+## 🌟 Contributors <a name="contributors" />
+ 
+<b>Developer</b>: <i>Sung Hyun Back (@sung2063)</i>
+ 
+<b>Designer</b>: <i>Da Eun Park</i>
+
 ## 📝 License <a name="license" />
  
- The code is licensed under the <a href="https://github.com/sung2063/AndroidTableauLibrary/blob/master/LICENSE">MIT License</a>.
-
- ## 🌟 Contributors <a name="contributors" />
- 
- <b>Developer</b>: <i>Sung Hyun Back (@sung2063)</i>
- 
- <b>Designer</b>: <i>Da Eun Park</i>
+The code is licensed under the <a href="https://github.com/sung2063/AndroidTableauLibrary/blob/master/LICENSE">MIT License</a>.
