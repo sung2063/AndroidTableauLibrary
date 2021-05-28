@@ -28,6 +28,7 @@ class LinearProgressItemsAdapter(
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTitle: TextView = view.findViewById(R.id.tv_title)
+        val tvProgressValue: TextView = view.findViewById(R.id.tv_progress_value)
         val ivFilledBar: ImageView = view.findViewById(R.id.iv_filled_bar)
         val ivUnfilledBar: ImageView = view.findViewById(R.id.iv_unfilled_bar)
         val tvMiddleValue: TextView = view.findViewById(R.id.tv_middle_value)
@@ -43,6 +44,7 @@ class LinearProgressItemsAdapter(
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
         viewHolder.tvTitle.text = dataList[position].name
+        viewHolder.tvProgressValue.text = "${dataList[position].value}%"
 
         // Determine filled and unfilled colors
         var filledColor: String
